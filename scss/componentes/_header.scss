@@ -1,0 +1,112 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.sucasa{
+ background-image: url("../img/accidente2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+   
+
+h2 {
+    background-color: nth($colores, 1);
+    text-align: center;
+    color: nth($colores, 4);
+    font-family:map-get($cabecera, font-family);
+    font-size: nth($size, 1);
+    padding: 20px;
+  }
+  
+h3 {
+    font-family: inter;
+    align-items: center;
+    color: nth($colores, 2);
+    padding: 30px;
+  }
+
+header{
+    margin: 40px;
+    h1{
+        font-family:map-get($cabecera, font-family);
+        font-size: 80px;
+        text-align: center;
+        font-family: courgette;
+
+    }
+}
+
+
+
+
+.f1{
+    display: flex;
+    background-color:nth($colores, 1);
+    height: 230px;
+    .iframe{
+        padding: 30px;
+    }
+
+}
+
+footer{
+  display: flex;
+  background-color: rgb(162, 161, 162);
+  li{
+        
+    a{
+      @include footer
+    }
+  }
+}
+
+
+
+section{
+   @include section;
+    .parrafo1{
+      @extend %parrafo
+        
+  }
+}
+
+.obra1{
+    margin: 60px;
+    justify-content: space-around;
+}
+
+.menu{
+  position: fixed;  
+}
+
+
+.dispositivo{
+  display: flex;
+ 
+}
+
+.parrafo1:hover{
+  transform: translate(200px);
+  transition: all 2 ease-in;
+
+}
+
+@media handheld, only screen and (max-width: 767px){
+  .dispositivo{
+  display:none;
+   }  
+  .parrafo1:hover{
+    transform: none;
+    }
+
+}
+  
+
+       
+
+
+
+
+
+
