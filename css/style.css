@@ -17,6 +17,16 @@ section .parrafo1 {
   background-size: cover;
 }
 
+.dispositivo {
+  display: flex;
+}
+.dispositivo .foto:hover {
+  filter: blur(3px);
+}
+
+/*overflow: hidden;
+    -webkit-transform:scale(1.2);transform:scale(1.2);*/
+/*filter:blur(3px)*/
 h2 {
   background-color: black;
   text-align: center;
@@ -45,18 +55,28 @@ header h1 {
 
 .f1 {
   display: flex;
+  justify-content: center;
   background-color: black;
   height: 230px;
+  width: auto;
 }
 .f1 .iframe {
-  padding: 30px;
+  margin: 15px;
+  flex-direction: row;
 }
 
 footer {
   display: flex;
   background-color: rgb(162, 161, 162);
+  margin: 20px;
 }
-footer li a {
+footer div .btn {
+  background-color: red;
+  box-sizing: border-box;
+  height: 30px;
+  width: 25;
+}
+footer a {
   text-decoration: none;
   justify-content: center;
   text-align: center;
@@ -83,13 +103,39 @@ section {
   position: fixed;
 }
 
-.dispositivo {
-  display: flex;
-}
-
 .parrafo1:hover {
   transform: translate(200px);
   transition: all 2 ease-in;
+}
+
+/*suscripcion*/
+.suscripcion {
+  flex-direction: column;
+  margin: 25px;
+}
+.suscripcion form {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+.suscripcion form > input {
+  flex: 5 1 10ch;
+  border-radius: 5px;
+}
+.suscripcion form > input[type=email] {
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+}
+.suscripcion input {
+  border: none;
+  background: rgb(162, 161, 162);
+  border-radius: 0.3px;
+  margin: 20px;
+}
+.suscripcion input[type=submit] {
+  background: red;
+  color: white;
 }
 
 @media handheld, only screen and (max-width: 767px) {

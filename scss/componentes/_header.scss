@@ -10,6 +10,19 @@
 }
    
 
+.dispositivo{ 
+   display:flex;
+    .foto:hover{
+      filter:blur(3px)
+    }
+    
+  }
+
+  /*overflow: hidden;
+      -webkit-transform:scale(1.2);transform:scale(1.2);*/
+
+/*filter:blur(3px)*/
+
 h2 {
     background-color: nth($colores, 1);
     text-align: center;
@@ -42,10 +55,15 @@ header{
 
 .f1{
     display: flex;
+    justify-content: center;
     background-color:nth($colores, 1);
     height: 230px;
+    width: auto;
+   
+   
     .iframe{
-        padding: 30px;
+        margin:15px;
+        flex-direction: row;
     }
 
 }
@@ -53,13 +71,23 @@ header{
 footer{
   display: flex;
   background-color: rgb(162, 161, 162);
-  li{
-        
+  margin: 20px;
+  
+  div{
+    .btn{
+      background-color:nth($colores, 2);
+      box-sizing: border-box;
+      height: 30px;
+      width: 25;
+      }
+      
+    
+    }
     a{
       @include footer
     }
   }
-}
+
 
 
 
@@ -81,32 +109,59 @@ section{
 }
 
 
-.dispositivo{
-  display: flex;
- 
-}
-
 .parrafo1:hover{
   transform: translate(200px);
   transition: all 2 ease-in;
 
 }
 
-@media handheld, only screen and (max-width: 767px){
-  .dispositivo{
-  display:none;
-   }  
-  .parrafo1:hover{
-    transform: none;
+
+
+/*suscripcion*/
+
+  .suscripcion{
+    flex-direction: column;
+    margin: 25px;   
+    form{
+      display: flex;
+      flex-wrap:wrap;
+      border-radius: 5px;
+      
+      & > input {
+          flex: 5 1 10ch;
+          border-radius: 5px;
+              
+        &[type="email"] {
+          width: 90px;
+          height:40px;
+          border-radius: 5px;
+        }
+      }
     }
+    
+    input {
+      border: none;
+      background: nth($colores, 3);
+      border-radius: 0.3px;
+      margin:20px;
+      
+      &[type="submit"] {
+        background: nth($colores, 2);
+        color: nth($colores, 4)
+      }
+    }
+    
+  }
 
-}
-  
 
-       
-
-
-
+  @media handheld, only screen and (max-width: 767px) {
+    .dispositivo {
+      display: none;
+    }
+    .parrafo1:hover {
+      transform: none;
+    }
+  }
 
 
 
