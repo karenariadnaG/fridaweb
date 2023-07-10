@@ -62,7 +62,7 @@ header{
    
    
     .iframe{
-        margin:15px;
+        margin: 20px;
         flex-direction: row;
     }
 
@@ -71,22 +71,26 @@ header{
 footer{
   display: flex;
   background-color: rgb(162, 161, 162);
-  margin: 20px;
-  
-  div{
-    .btn{
-      background-color:nth($colores, 2);
-      box-sizing: border-box;
-      height: 30px;
-      width: 25;
+  margin: 35px;
+  nav{
+    font-family: courgette;
+    margin: 20px;
+    @mixin footer{
+      a{
+        color: nth($colores, 2);
+
       }
       
-    
     }
-    a{
-      @include footer
-    }
+
   }
+}
+  
+  
+
+
+  
+  
 
 
 
@@ -107,6 +111,7 @@ section{
 .menu{
   position: fixed;  
 }
+
 
 
 .parrafo1:hover{
@@ -162,6 +167,5 @@ section{
       transform: none;
     }
   }
-
 
 

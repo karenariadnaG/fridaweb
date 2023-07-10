@@ -4,17 +4,11 @@
     justify-content: center;
 }
 
-
 @mixin footer{
-        text-decoration: none;
-        justify-content: center;
-        text-align: center;
-        margin: 20px;     
-        border-radius: 5px;
-        size: 20px;
-        font-family: inter;
-        color: white;
-        background-color:nth($colores, 3);
-        height: 30px;
-        
+    flex-flow: row nowrap;
+    text-decoration:none;
+    align-items: center;
+    margin: 20px;
+   
+   
 }
